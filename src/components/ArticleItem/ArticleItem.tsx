@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import { Text, Link, Stack, Image } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-import { ArticleItemContainer } from "./Article.styles";
+import { ArticleItemContainer } from "./ArticleItem.styles";
 
 import { ArticleType } from "src/types";
 

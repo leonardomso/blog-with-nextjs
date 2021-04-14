@@ -4,7 +4,7 @@ import readingTime from "reading-time";
 import mdxPrism from "mdx-prism";
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
-import { ArticleJsonLd, NextSeo } from "next-seo";
+import { NextSeo } from "next-seo";
 
 import MDXComponents from "src/components/MDXComponents/MDXComponents";
 
@@ -40,28 +40,6 @@ const Index = ({ readingTime, frontMatter, slug, source }: Props) => {
     <Center pt={5} pb={5}>
       <NextSeo
         title={frontMatter.title}
-        description={frontMatter.description}
-        canonical={`https://podhouse.app/blog/${slug}`}
-        openGraph={{
-          url: `https://podhouse.app/blog/${slug}`,
-          title: frontMatter.title,
-          description: frontMatter.description,
-          images: [
-            {
-              url: `/images/articles/${slug}.jpeg`,
-            },
-          ],
-          site_name: frontMatter.title,
-        }}
-      />
-      <ArticleJsonLd
-        url={`https://podhouse.app/blog/${slug}`}
-        title={frontMatter.title}
-        images={[frontMatter.ogImage.url]}
-        datePublished={frontMatter.date}
-        authorName="Leonardo Maldonado"
-        publisherName="Leonardo Maldonado"
-        publisherLogo="/images/logo/icon-1200x630.jpg"
         description={frontMatter.description}
       />
 
