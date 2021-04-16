@@ -56,7 +56,6 @@ const Index = ({ readingTime, frontMatter, slug, source }: Props) => {
   );
 };
 
-
 type Params = {
   params: {
     slug: string;
